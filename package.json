@@ -1,0 +1,25 @@
+{
+  "name": "node-exam",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Majdi Toumi <majdi@mhirba.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "DigitalCollege",
+    "Typescript",
+    "Exam"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.20",
+    "path": "^0.12.7",
+    "ts-node": "^9.1.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "prompt": "^1.1.0",
+    "typescript": "^4.1.3"
+  }
+}
