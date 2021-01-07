@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-function displayList(currentDir:any, option:any = null){
+function displayList(currentDir:string, option:string|null = null){
 
     let files = fs.readdirSync(currentDir);
     //alphabetically sort
@@ -25,7 +25,7 @@ function displayList(currentDir:any, option:any = null){
     });
 }
 
-function recursiveList(currentDir:any){
+function recursiveList(currentDir:string){
 
     console.log(currentDir+' :')
     
@@ -66,8 +66,8 @@ function myls() {
         if(process.argv.length >= 3){
 
             if(process.argv[2] !== '-a' && process.argv[2] !== '-R'){
-                
-                if(process.argv[2].startsWith('/home/abdelaziz')){
+
+                if(process.argv[2].startsWith('/home/')){
 
                     displayList(process.argv[2])
                 }
@@ -90,7 +90,7 @@ function myls() {
                     else{ functionCalled = recursiveList}
                     if(process.argv[3]){
 
-                        if(process.argv[3].startsWith('/home/abdelaziz')){
+                        if(process.argv[3].startsWith('/home/')){
 
                             functionCalled(process.argv[3], option)
                         }

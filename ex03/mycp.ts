@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-function copyFile(src:any, dest:any){
+function copyFile(src:string, dest:string){
             
     if(fs.existsSync(dest)){
 
@@ -19,7 +19,7 @@ function copyFile(src:any, dest:any){
     fs.copyFileSync(src, dest)
 }
 
-function copyDir(src:any, dest:any){
+function copyDir(src:string, dest:string){
 
     const nextDest = path.join(dest,path.basename(src))
     if(fs.existsSync(dest)){
